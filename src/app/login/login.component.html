@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>{{title}}</h1>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" >
+        </div>
+        <div class="form-group">
+            <label for="password">password</label>
+            <input type="text" class="form-control" id="password" >
+        </div>
+        <button class="btn btn-default" (click)="getUsers()">
+            查看用户
+        </button>
+        <button type="submit" class="btn btn-default" (click)="addUser()">Submit</button>
+    </form>
+    <div *ngIf="selectedLook">
+        <h2>
+            {{selectedLook.name | uppercase}}
+        </h2>
+
+    </div>
+</div>
